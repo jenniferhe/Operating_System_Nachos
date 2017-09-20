@@ -1,0 +1,7 @@
+1.) Copy cross-compiler to your directory.  I put it in the same directory as where I downloaded the nachos code (but not in the nachos directory).
+2.) Unzip and untar the file (say /home/XYZ/mips-x86.linux-xgcc)
+3.) Set environment variables by adding them to your .bashrc or .bash_profile file in your home directory. (I used .bash_profile.)
+    export ARCHDIR=/home/XYZ/mips-x86.linux-xgcc
+    export PATH=$ARCHDIR:$PATH
+4.) Go to proj2 and run "make test" which should build the test programs.
+5.) Try running ../bin/nachos from within proj2.  Once you enter q, nachos will execute halt.coff and should halt with no errors.  By default, proj2 executes the halt.coff file within test/, but you can specify a different file (e.g. mv.coff) by running ../bin/nachos -x mv.coff.  Since most syscall implementations are missing, this will likely throw exceptions within nachos.
